@@ -24,8 +24,9 @@ export default defineConfig({
   // Use HTML reporter for better visibility
   reporter: [
     ['html', { outputFolder: 'playwright-report' }],
-    ['junit', { outputFile: 'playwright-report/results.xml' }] // ✅ Add this line
+    ['junit', { outputFile: 'playwright-report/test-results.xml' }] 
   ],
+  
 
   // Shared settings for all projects
   use: {
