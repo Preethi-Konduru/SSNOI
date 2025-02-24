@@ -22,7 +22,11 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // Use HTML reporter for better visibility
-  reporter: 'html',
+  reporter: [
+    ['html', { outputFolder: 'playwright-report' }],
+    ['junit', { outputFile: 'playwright-report/test-results.xml' }] 
+  ],
+  
 
   // Shared settings for all projects
   use: {
